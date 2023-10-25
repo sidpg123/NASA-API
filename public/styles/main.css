@@ -1,0 +1,160 @@
+body{
+    margin: 0;
+    padding: 0;
+}
+
+.backVideo{
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    z-index: -1;
+}
+
+@media (min-aspect-ratio: 16/9){
+    .backVideo{
+        width: 100%;
+        height: auto;
+    }
+}
+
+
+@media (max-aspect-ratio: 16/9){
+    .backVideo{
+        width: auto;
+        height: 100%;
+    }
+}
+
+nav{
+    width: 100%;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: space-between;
+}
+
+nav ul li a{
+    text-decoration: none;
+    color: white;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size:larger;
+
+}
+
+nav ul li{
+    text-decoration: none;
+    display: inline-block;
+    list-style: none;
+    padding-left: 5vb;
+    padding-top: 5vb;
+    text-decoration:none ;
+    padding-right: 2vb;
+}
+
+.logo{
+    height: 15vh;
+    padding-left: 8vb;
+    padding-top: 5vb;
+}
+
+
+.hero{
+    display: grid;
+    place-items: center;
+}
+
+h1, p{
+    color: white;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+p{
+    font-size: 20px;
+}
+
+h1{
+    font-weight: 300;
+    font-size:60px;
+    margin-bottom: 5px;
+}
+
+#search{
+    padding: 10px 30vh;   
+    border-radius: 8px;
+    padding-left: 20px;
+    padding-right: 70vh;
+    border-color:white;    
+}
+
+#search::placeholder {
+    font-size: 1.2em;
+    padding: 5px;
+    padding-left: 0;
+    text-align: left;
+}
+
+#submit{
+    border-radius: 18px;
+    background-color: white;
+    padding:1vh 5vh ;
+    display: block;
+    margin-left: 37vh;
+    font-size: larger;
+    margin-top: 3vh;
+    transition-duration: 0.4s;  
+}
+
+#submit:hover{
+    background-color: rgb(165, 164, 164);
+    cursor: pointer;
+    transform: translateY(-2px);
+}
+
+
+.images{
+    display: inline-block;
+    margin-right: 30px;
+    width: 30vh;
+    height: auto;  
+    margin-bottom: 0;  
+}
+
+.image-list{
+    list-style: none;
+    display: flex;
+}
+
+.card0{
+    border-radius: 10px;    
+    margin-bottom: 0;
+}
+
+
+#title{
+    background-color: rgb(156, 152, 152);
+    /* border-radius: 0 10px; */
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    padding: 10px 0px;
+}
+
+.card{
+    margin-top: 5vh;
+   margin-bottom: 0;
+}
+
+.cardDiv{
+   /* // border: 1px solid whitesmoke; */
+    margin-right: 30px;
+    width: 30vh;
+    height: auto;
+    transition-duration: 0.4s;  
+}
+
+.cardDiv:hover{
+    transform: translateY(-5px);
+    transform: scale(1.2);
+    /* margin-right: 40px; */
+    /* width: 35vh; */
+}

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NASA Gallery</title>
+    <link rel="stylesheet" href="/styles/main.css">
+</head>
+
+<body>
+    <nav>
+        <div>
+            <img src="/images/pngwing.com.png" alt="Nasa logo" class="logo">
+        </div>
+        <div class="nanItems">
+            <ul class="listOf">
+                <li><a href="index.ejs">Home</a></li>
+                <li><a href="apod">Astronomy Picture of the Day</a></li>
+                <li><a href="/videos">Videos</a></li>
+            </ul>
+        </div>
+    </nav>
+
+
+    <video autoplay muted loop class="backVideo">
+        <source src="/images/video2.mp4" type="video/mp4">
+    </video>
+
+    <div class="hero">
+        <h1>Helllo, earthlings!</h1>
+        <p>Here you can find photos of our planet, the outer planets and galaxies too!</p>
+        <form method="post" action="/search">
+            <input type="text" name="search" id="search" placeholder="Search for images">
+            <!-- <input type="search" name="search" id="search" placeholder="Search for images"> -->
+            <br>
+            <input type="submit" value="Search" id="submit">
+        </form>
+    </div>
+    <div class="card">
+        <% if (typeof images !== 'undefined' && images.length> 0) { %>
+            <ul class="image-list">
+                <% for (let i=0; i < 10 && i < images.length; i++) { %>
+                    <div class="cardDiv">
+                        <li class="card0">
+                            <img src="<%= images[i] %>" alt="NASA Image" class="images">
+                            <p id="title"><%= title[i] %> </p>
+                        </li>
+                    </div>
+                    <% } %>
+            </ul>
+            <% }  %>
+    </div>
+
+    
+
+
+</body>
+
+</html>
